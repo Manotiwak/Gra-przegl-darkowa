@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Biko_Bold;
+    src: url("./Komponenty/Biko_Bold.otf") format("opentype");
+
+  }
+
+
+
+#kontener{
+  display: flex;
+  flex-direction: row; 
+  font-family: Biko_Bold;
+  cursor: default;
+}
+
+#prawyEkran{
+  display: flex;
+  background-color: #383866;
+  flex: 80%;
+  cursor: default;
+}
+
+#root{
+  height: 100vh;
+  width: 100%;
+  min-width: 966px;
+  background-image: url('ciemneDrewno.png');
+}
+/*
+::-webkit-scrollbar {
+  width: 20px; 
+  background-color: #555487;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8583d4;
+  border: 5px solid #45446e;
+  border-radius: 5px; 
+} 
+*/
+::-webkit-scrollbar {
+  width: 20px; 
+  background: linear-gradient(to right, transparent, rgb(135, 127, 84,0.4), rgb(135, 127, 84,0.4), transparent),
+  url('lina.png') repeat-y center center;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: url('sowak.png');
+  background-size: cover;
+  border: 1px solid black;
+} 
+
+
+::-webkit-scrollbar-track:horizontal {
+  background: linear-gradient(to right, transparent, rgba(135, 127, 84, 0.4), rgba(135, 127, 84, 0.4), transparent),
+            url('linaR.png') repeat-y center center;
+background-size: cover;
+}
