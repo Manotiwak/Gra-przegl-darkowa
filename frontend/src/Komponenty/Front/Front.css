@@ -1,0 +1,79 @@
+@font-face {
+  font-family: Biko_Bold;
+  src: url("../Biko_Bold.otf") format("opentype");
+
+}
+
+
+.Front #kontener {
+  display: flex;
+  flex-direction: row;
+}
+
+.Front {
+  font-family: Biko_Bold;
+}
+
+.Front #zawartoscEkranu {
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Front #boxZawartosc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.Front .tloFront {
+  flex-grow: 1;
+  background-image: url('tloFront.png');
+  background-size: cover;
+  background-position: center;
+  min-width: 700px;
+}
+
+.Front .boxKontener{
+  position: relative;
+}
+
+.Front .tloScenariusz{
+  background-image: url('pismo.png');
+  background-size: cover;
+  width: 699px;
+  height: 699px;
+  margin: 0 auto;
+}
+.Front .wolneMiejsce{
+  height: 100px;
+}
+
+.Front .boxScenariusz{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-right: 80px;
+  padding-left: 100px;
+  padding-right: 30px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.Front ::-webkit-scrollbar {
+  width: 30px; 
+  background: linear-gradient(to right, transparent, rgb(135, 127, 84,0.4), rgb(135, 127, 84,0.4), transparent),
+  url('lina.png') repeat-y center center;
+border-radius: 5px 5px 15px 15px; /* Zaokrąglenie krawędzi */
+box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.3); /* Dodanie efektu cienia po prawej stronie */
+}
+
+.Front ::-webkit-scrollbar-thumb {
+  background-image: url('sowak.png');
+  border: 0px solid black;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9); /* Dodanie efektu cienia */
+} 
+
+
+
+

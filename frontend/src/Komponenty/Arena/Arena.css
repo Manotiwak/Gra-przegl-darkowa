@@ -1,0 +1,391 @@
+@font-face {
+  font-family: Biko_Bold;
+  src: url("../Biko_Bold.otf") format("opentype");
+
+}
+
+.Arena #zawartoscEkranu{
+
+  display: flex;
+  flex-direction: column;
+  min-width: 715px;
+  background-image: url('tloArena.png');
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  text-shadow:
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; 
+}
+
+
+.Arena #boxGora{
+  height: 5vh;
+}
+
+.Arena #boxWyboru{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+  justify-content: center;
+  min-height: 300px;
+  margin-bottom: 50px;
+}
+
+.Arena .wyborPostaci{
+  /*border: 2px solid #45446e;
+  background-color: #555487;*/
+  border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 55px black;
+  width: 20%;
+  min-width: 150px;
+  color: white;
+  font-family: Biko_Bold;
+}
+
+.Arena #boxObrazek{
+  width: 100%;
+}
+
+.Arena .boxNazwa{
+  font-size: 24px;
+  box-shadow: 0px 0px 15px black;
+}
+
+.Arena #boxObrazek img{
+  width: 100%;
+  height: 100%;
+}
+
+.Arena #boxInfo{
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  font-family: Biko_Bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 100px black;
+}
+
+.Arena .wyborPostaci {
+  transition: transform 0.3s; 
+}
+
+
+.Arena .wyborPostaci:hover{
+  transform: scale(1.1); 
+  transition: transform 0.3s; 
+
+}
+
+.Arena .boxPojedynkiAlert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Arena .alert {
+  color: rgba(255, 0, 0,0.9);
+  padding: 20px;
+  font-size: 24px;
+  font-family: Biko_Bold;
+  border-radius: 10px;
+  animation: powieksz 2.1s; 
+}
+
+@keyframes powieksz {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15); /* Powiększa się 1.5x */
+  }
+}
+
+
+.Arena .animacjaPojedynku {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; 
+  background-color: rgba(0, 0, 0, 0.9); 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:30px;
+  align-items: center;
+}
+
+.Arena .profilePostaci {
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+  flex-direction: row;
+  gap:30px;
+  
+}
+
+.Arena .profilePostaci .graczA , .Arena .profilePostaci .graczB{
+  width: 22vw;
+  height: 22vw;
+  min-width: 180px;
+  min-height: 180px;
+  border: 2px solid #45446e;
+}
+
+.Arena .profilePostaci .graczA img, .Arena .profilePostaci .graczB img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.Arena .profilePostaci .graczA.atak{
+  z-index: 1001;
+  animation: atakiA 4.1s; 
+}
+
+
+@keyframes atakiA {
+  0% {
+      transform: translateX(0vw) scale(1); 
+      
+    }
+    20% {
+      transform: translateX(0vw) scale(1); 
+      
+    }
+    50%,55% {
+      transform: translateX(40vw) scale(0.55) rotate(5deg); 
+    }
+    80% {
+      
+      transform: translateX(0vw) scale(1); 
+    
+    }
+}
+
+
+.Arena .profilePostaci .graczB.atak{
+  z-index: 1001;
+  animation: atakiB 4.1s; 
+}
+
+@keyframes atakiB {
+0% {
+  transform: translateX(0vw) scale(1); 
+  
+}
+20% {
+  
+  transform: translateX(0vw) scale(1); 
+
+}
+50%,55% {
+  transform: translateX(-40vw) scale(0.55) rotate(-5deg); 
+}
+80% {
+  
+  transform: translateX(0vw) scale(1); 
+
+}
+}
+
+.Arena .profilePostaci .graczB.obrona{
+  animation: obronaB 4.1s; 
+}
+
+@keyframes obronaB {
+  49%,61% {
+      transform: rotate(0);
+    }
+
+50%,55%,60% {
+  transform: rotate(-5deg);
+}
+52%,53% {
+  transform: rotate(5deg); 
+}
+
+
+}
+
+
+.Arena .profilePostaci .graczA.obrona{
+  animation: obronaA 4.1s; 
+}
+
+@keyframes obronaA {
+49%,61% {
+  transform: rotate(0);
+}
+
+50%,55%,60% {
+transform: rotate(-5deg);
+}
+52%,53% {
+transform: rotate(5deg); 
+}
+}
+
+.Arena .atakiPostaci {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; 
+  background-color: rgba(0, 0, 0, 0.1); 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:30px;
+  align-items: center;
+}
+
+.Arena .boxObrazeniaA, .Arena .boxObrazeniaB{
+  z-index: 1002; 
+  color:red;
+  font-size: 48px;
+  font-family: Biko_Bold;
+  opacity: 0;
+}
+
+.Arena .graczA.obrona .boxObrazeniaA, .Arena .graczB.obrona .boxObrazeniaB{
+  transform: translateY(-1vw); 
+  animation: obrazenia 4.1s;
+}
+
+@keyframes obrazenia {
+  0%,49% {
+      opacity: 0;
+      transform: translateY(-1vw); 
+    }
+
+50% {
+  opacity: 0.01;
+  transform: translateY(-2vw); 
+}
+100% {
+  opacity: 1; 
+  transform: translateY(-20vw); 
+}
+}
+
+.Arena .boxMaxZdrowieB{
+position: relative;
+width: 100%;
+height: 3vw;
+background-color: rgb(59, 2, 2);
+border: 0px solid rgb(163, 0, 0)
+}
+
+.Arena .boxMaxZdrowieA{
+position: relative;
+width: 100%;
+height: 3vw;
+background-color: rgb(59, 2, 2);
+border: 0px solid rgb(163, 0, 0)
+}
+
+.Arena .boxProgresZdrowieB{
+height: 100%;
+background-color: rgb(197, 2, 2);
+}
+
+.Arena .boxProgresZdrowieA{
+height: 100%;
+background-color: rgb(197, 2, 2);
+}
+
+.Arena .liczbaZdrowie{
+position: absolute;
+top: 0.5vw;
+left: 0;
+right: 0;
+font-size: 2vw;
+text-align: center;
+justify-content: center;
+background-color: transparent;
+pointer-events: none;
+color: white;
+font-family: Biko_Bold;
+}
+
+
+.Arena .napisW{
+font-size: 5vw;
+color:rgb(0, 222, 0);
+text-shadow: 2px 2px 2px rgba(0, 222, 0, 0.5);
+}
+
+.Arena .napisP{
+font-size: 5vw;
+color:rgb(222, 0, 0);
+text-shadow: 2px 2px 2px rgba(222, 0, 0, 0.5);
+}
+
+.Arena .boxWygrana h1{
+color:white;
+text-shadow: 2px 2px 2px rgba(0, 222, 0, 0.5);
+font-family: Biko_Bold;
+}
+
+.Arena .boxWygrana p{
+color:white;
+text-shadow: 2px 2px 2px rgba(0, 222, 0, 0.5);
+font-family: Biko_Bold;
+}
+
+.Arena .boxPrzycisk{
+color:white;
+font-family: Biko_Bold;
+padding: 3px;
+border:2px solid #45446e;
+background-color: #555487;
+cursor:pointer;
+}
+
+.Arena .boxPrzycisk:hover{
+background-color: #45446e;
+}
+
+.Arena .boxPrzegrana h1{
+color:white;
+text-shadow: 2px 2px 2px rgba(222, 0, 0, 0.5);
+font-family: Biko_Bold;
+}
+
+.Arena .boxPrzegrana h1{
+color:white;
+text-shadow: 2px 2px 2px rgba(222, 0, 0, 0.5);
+font-family: Biko_Bold;
+}
+
+
+.Arena .boxOpisStatystyk{
+display: flex;
+flex-direction: column;
+align-items: left;
+margin-left: 10%;
+margin-bottom: 5px;
+width: 80%;
+}
+
+.Arena .Statystyka{
+text-align: left;
+}
