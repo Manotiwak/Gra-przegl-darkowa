@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Biko_Bold;
+    src: url("../Biko_Bold.otf") format("opentype");
+
+}
+
+.Ranking #kontener {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Ranking #zawartoscEkranu {
+    min-width: 715px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('tloRanking.png');
+  background-size: cover;
+  background-position: center;
+    flex: 1;
+}
+
+.Ranking #boxZawartosc {
+    padding-top:1vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Ranking .boxKontener {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 97%;
+    height: 70vmin;
+    color: white;
+    font-family: Biko_Bold;
+    text-shadow:
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; 
+}
+
+.Ranking .boxObrazek {
+    width: 4vmin;
+    height: 4vmin;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.Ranking .boxObrazek img {
+    width: 100%;
+    height: 100%;
+}
+
+.Ranking .twojWynik {
+    color: goldenrod
+}
+
+.Ranking .wierszTabeli {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 round;
+    box-shadow: 10px 10px 25px black;
+}
+
+.Ranking .borderTable{
+    width: 100%;
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 25px black;
+}
+
+.Ranking .boxTabelaRanking {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgb(255, 255, 255,0.3);
+}
+
+
+.Ranking .boxTabelaRanking td {
+    text-align: center;
+}
+
+.Ranking .boxTabelaRanking td .boxObrazek {
+    display: inline-block;
+}
+
+
+
+.Ranking .komorkaTabeli {
+    padding: 1vmin;
+    background-color: rgba(46, 40, 22,0.9);
+    box-shadow: 10px 10px 25px rgba(46, 40, 22,1);
+}
+
+.Ranking .boxTabelaRanking tr:nth-child(even) {
+    background-color: rgba(46, 40, 22,0.7);
+    box-shadow: 0px 0px 55px rgba(46, 40, 22,1);
+}
+
+.Ranking #triangleA {
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 2vmin solid #50f34a;
+}
+
+.Ranking #triangleD {
+    right: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-top: 2vmin solid #F34A53;
+}
+
+
+.Ranking .wartosciSortujace {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.Ranking .przejsciaStron {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 3vmin;
+}
+
+.Ranking .przejsciaStron div {
+    padding: 1vmin;
+}
+
+.Ranking .boxStrzalka {
+    cursor: pointer;
+}

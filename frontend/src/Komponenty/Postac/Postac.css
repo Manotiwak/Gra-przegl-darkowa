@@ -1,0 +1,271 @@
+
+.Postac #zawartoscEkranu{
+    min-width: 714px;
+    flex: 1;
+    color: white;
+    background-image: url('postacTlo.png');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.Postac #Przyciski{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Postac #Magazyn ,.Postac #Drzewo{
+    width: 5vw; 
+    height: 5vw; 
+    min-width: 50px;
+    min-height: 50px;
+    padding: 20px;
+    position: relative; 
+}
+
+
+
+.Postac #Magazyn img:hover ,.Postac #Drzewo img:hover{
+  transition: 0.5s;
+ transform: scale(1.05);
+}
+
+.Postac #ikona img{
+  transition: 0.5s; 
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    border-radius: 90%;
+    box-shadow: 10px 10px 25px black;
+    display: inline-block;
+    width: 100%; 
+    height: 100%;
+    line-height: 100px; 
+    text-align: center; 
+    background-color: #3498db; 
+    color: #fff; 
+    text-decoration: none; 
+    cursor: pointer;
+  }
+
+
+  
+  .Postac #Statystyki{
+    width: 10vw; 
+    min-width: 150px;
+    min-height: 50px;
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 25px black;
+  }
+
+  .Postac #gornaCzesc{
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .Postac #lewoGornaCzesc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 60%;
+    min-width: 200px
+  }
+
+  .Postac #prawoGornaCzesc{
+    flex: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    margin-right: 10%;
+    min-width: 400px;
+  }
+
+  .Postac #boxHelm , .Postac #boxOdziez ,.Postac #boxSpodnie, .Postac #boxButy{
+    width: 5vw;
+    height: 5vw;
+    min-width: 50px;
+    min-height: 50px;
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 25px black;
+    margin: 5px;
+  }
+
+  .Postac #boxNaszyjnik , .Postac #boxPas ,.Postac #boxRekawice, .Postac #boxNarzedzie{
+    width: 5vw;
+    height: 5vw;
+    min-width: 50px;
+    min-height: 50px;
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 25px black;
+    margin: 5px;
+  }
+
+  .Postac #boxDolny{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .Postac #boxGorny{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Postac #boxWyglad{
+    width: 15vw;
+    height: 15vw;
+    min-width: 180px;
+    min-height: 180px;
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 25px black;
+    margin: 1.5vw ;
+  }
+
+  .Postac #boxBron ,.Postac #boxZwierze{
+    
+    width: 5vw;
+    height: 5vw;
+    min-width: 50px;
+    min-height: 50px;
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 25px black;
+    margin: 5px;
+  }
+  .Postac #boxPoziom{
+    font-size: xx-large;
+    width: 6vw;
+    height: 6vw;
+    min-width: 60px;
+    min-height: 60px;
+    margin: 5px;
+  }
+
+
+
+
+  .Postac #boxOsiagniecia{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Postac #boxOsiagniecie1 , .Postac #boxOsiagniecie2 ,.Postac #boxOsiagniecie3 ,.Postac #boxOsiagniecie4 ,.Postac #boxOsiagniecie5 ,.Postac #boxOsiagniecie6 ,.Postac #boxOsiagniecie7 ,.Postac #boxOsiagniecie8 ,.Postac #boxOsiagniecie9{
+    width: 5vw;
+    height: 5vw;
+    min-width: 30px;
+    min-height: 30px;
+    border: 5px solid transparent;
+    border-image: url('ciemneDrewno.png') 1 fill;
+    box-shadow: 10px 10px 25px black;
+    margin: 10px;
+
+  }
+
+  .Postac #boxWyglad{
+    position: relative;
+  }
+
+  .Postac #boxWyglad img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .Postac #boxDoswiadczenie{
+    position: absolute;
+    top: 85%;               
+    left: 0;           
+    width: 100%;   
+    height: 12%;         
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0);  
+    font-size: 3vmin;
+  }
+
+  .Postac .pasekDoswiadczenie{
+    width: 90%;       
+    height: 100%;     
+    display: flex;
+    background: rgb(41, 12, 134);  
+    border: 2px solid rgb(26, 8, 88);
+  }
+
+  .Postac .procentDoswiadczenia{ 
+    height: 100%;     
+    display: flex;
+    align-items: left;
+    background: rgb(60, 0, 255);  
+  }
+
+  .Postac .liczbaDoswiadczenia{
+    position: absolute;
+    top: 0.1vw;
+    left: 0;
+    right: 0;
+    font-size: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    pointer-events: none;
+    color: white;
+    font-family: Biko_Bold;
+  }
+
+
+  .Postac #lewaKolumna{
+    flex:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Postac #srodekKolumna{
+    flex:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Postac #prawaKolumna{
+    flex:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .Postac #boxHelm img, .Postac #boxNaszyjnik img , .Postac #boxOdziez img , .Postac #boxPas img , .Postac #boxSpodnie img , .Postac #boxRekawice img , .Postac #boxButy img, .Postac #boxBron img, .Postac #boxZwierze img, .Postac #boxNarzedzie img{
+    width: 100%;
+    height: 100%;
+  }
+
+ .Postac #boxPoziom{
+  display: flex;
+  justify-content: center;
+    align-items: center;
+  background-image: url('./pinkStar.png');
+  background-blend-mode: multiply;
+  background-size: cover;
+ }
+
+ 
+
+ 

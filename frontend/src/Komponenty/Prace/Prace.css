@@ -1,0 +1,304 @@
+@font-face {
+    font-family: Biko_Bold;
+    src: url("./Biko_Bold.otf") format("opentype");
+
+}
+
+.Prace #Zawartosc {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    min-width: 700px;
+}
+
+.Prace .siatka {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vmin;
+    margin-top: 3vmin;
+    margin-left: 3vmin;
+}
+
+.Prace .nieaktywneOkno {
+    background-color: #555487;
+    width: 20vw;
+    height: 7.5vw;
+    padding: 5px;
+    text-align: center;
+    opacity: 0.3;
+    min-width: 240px;
+    min-height: 80px;
+}
+
+.Prace .okno {
+    background-color: #555487;
+    width: 20vw;
+    height: 7.5vw;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 240px;
+    min-height: 80px;
+}
+
+.Prace .oknoBlokady {
+    width: 20vw;
+    height: 7.5vw;
+    text-align: center;
+    color: antiquewhite;
+    min-width: 240px;
+    min-height: 100px;
+}
+
+.Prace #blokada {
+    height: 7.5vw;
+    width: 20vw;
+    opacity: 0.7;
+    border: 5px solid #555487;
+    background-image: url('./blokada.png');
+    background-size: cover;
+    background-position: center center;
+    min-width: 240px;
+    min-height: 80px;
+}
+
+.Prace table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Prace td {
+    border: 2px solid #000;
+    padding: 2.5px;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 1vw;
+    height: 1vw;
+    min-height: 70px;
+}
+
+
+
+.Prace .logo {
+    width: 33.3%;
+}
+
+.Prace #przycisk {
+    text-align: right;
+}
+
+.Prace #pracuj {
+    font-family: Biko_Bold;
+    color: white;
+    border: 2px solid #45446e;
+    background-color: #555487;
+    font-size: 1vw;
+    height: 1.6vw;
+    min-height: 18px;
+    min-width: 40px;
+    width: 4vw;
+}
+
+.Prace #odbierz {
+    font-family: Biko_Bold;
+    color: white;
+    border: 2px solid #45446e;
+    background-color: #555487;
+    font-size: 1vw;
+    height: 1.6vw;
+    min-height: 18px;
+    min-width: 100px;
+    width: 10vw;
+}
+
+.Prace button:hover {
+    cursor: pointer;
+    background-color: #45446e;
+}
+
+.Prace #pracuj:hover {
+    cursor: pointer;
+    background-color: #45446e;
+}
+
+.Prace #odbierz:hover {
+    cursor: pointer;
+    background-color: #45446e;
+}
+
+.Prace #przedmiot-container {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.Prace #opisLG {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    background-color: rgba(85, 84, 135, 0.8);
+    border: 1px solid #1e1e30;
+    padding: 10px;
+    z-index: 1;
+    min-width: 60px;
+    box-sizing: border-box;
+    pointer-events: none;
+    white-space: nowrap;
+
+}
+
+.Prace #opisPG {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    background-color: rgba(85, 84, 135, 0.8);
+    border: 1px solid #1e1e30;
+    padding: 10px;
+    z-index: 1;
+    min-width: 60px;
+    box-sizing: border-box;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.Prace #opisPD {
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    right: 10%;
+    background-color: rgba(85, 84, 135, 0.8);
+    border: 1px solid #1e1e30;
+    padding: 10px;
+    z-index: 1;
+    min-width: 60px;
+    box-sizing: border-box;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.Prace #opisLD {
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    background-color: rgba(85, 84, 135, 0.8);
+    border: 1px solid #1e1e30;
+    padding: 10px;
+    z-index: 1;
+    min-width: 60px;
+    box-sizing: border-box;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.Prace #przedmiot-container:hover #opisLG {
+    text-align: center;
+    border-radius: 5%;
+    border: 5px solid #1e1e30;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+.Prace #przedmiot-container:hover #opisPG {
+    text-align: center;
+    border-radius: 5%;
+    border: 5px solid #1e1e30;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+.Prace #przedmiot-container:hover #opisPD {
+    text-align: center;
+    border-radius: 5%;
+    border: 5px solid #1e1e30;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+.Prace #przedmiot-container:hover #opisLD {
+    text-align: center;
+    border-radius: 5%;
+    border: 5px solid #1e1e30;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+.Prace #przedmiot-container:hover .pospolity {
+    box-shadow: 0 0 10px rgba(44, 196, 44, 0.7);
+    /* Dodaj cień na hover */
+}
+
+.Prace #przedmiot-container:hover .rzadki {
+    box-shadow: 0 0 20px rgba(14, 126, 255, 0.7);
+    /* Dodaj cień na hover */
+}
+
+.Prace #przedmiot-container:hover .epicki {
+    box-shadow: 0 0 20px rgba(128, 24, 160, 0.7);
+    /* Dodaj cień na hover */
+}
+
+.Prace #przedmiot-container:hover .legendarny {
+    box-shadow: 0 0 20px rgba(255, 238, 0, 0.7);
+    /* Dodaj cień na hover */
+}
+
+.Prace #pospolity {
+    color: rgba(44, 196, 44, 0.7);
+}
+
+.Prace #rzadki {
+    color: rgba(14, 126, 255, 0.7);
+}
+
+.Prace #epicki {
+    color: rgba(128, 24, 160, 0.7);
+}
+
+.Prace #legendarny {
+    color: rgba(255, 238, 0, 0.7);
+}
+
+.Prace #ikona {
+    border: 3px solid #45446e;
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    margin-left: -2px;
+    background-color: #555487;
+}
+
+.Prace #ikona img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .Prace td {
+        font-size: 10px;
+    }
+
+    .Prace #pracuj {
+        font-size: 10px;
+    }
+
+    .Prace #odbierz {
+        font-size: 10px;
+    }
+
+    .Prace .siatka {
+        grid-template-columns: repeat(2, 1fr);
+        height: 680px;
+        overflow: auto;
+    }
+}
