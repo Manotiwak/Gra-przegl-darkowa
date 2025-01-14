@@ -1,0 +1,395 @@
+@font-face {
+  font-family: Biko_Bold;
+  src: url("./Biko_Bold.otf") format("opentype");
+
+}
+
+
+.Sklep #zawartoscEkranu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Dziel obszar na dwie kolumny */
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  /* Dziel obszar na dwie rzędy */
+  height: 90vh;
+  grid-gap: 10px;
+  /* odstępy między elementami */
+  margin: 25px;
+  min-width: 650px;
+}
+
+.Sklep #sprzedawca {
+  grid-column: 1 / 2;
+  /* Rozpocznij w kolumnie 1 */
+  grid-row: 1 / 3;
+  /* Rozpocznij w rzędzie 1 */
+  min-height: 200px;
+  min-width: 300px;
+  height: 22vw;
+  width: 32vw;
+  border: 3px solid #45446e;
+}
+
+.Sklep #przedmioty {
+  grid-column: 1 / 2;
+  /* Rozpocznij w kolumnie 1 */
+  grid-row: 3 / 4;
+  /* Rozpocznij w rzędzie 2 */
+  margin-top: 4vw;
+  flex-wrap: wrap;
+  display: flex;
+  width: 32vw;
+  height: 17vw;
+  min-width: 300px;
+  min-height: 150px;
+  border: 3px solid #45446e;
+  background-color: #1e1e30;
+}
+
+.Sklep #magazyn {
+  grid-column: 2 / 3;
+  /* Rozpocznij w kolumnie 2 */
+  grid-row: 1 / 6;
+  /* Rozpocznij w rzędzie 1 i rozciągnij się do rzędu 3 */
+  flex-wrap: wrap;
+  display: flex;
+  overflow: auto;
+  width: 38vw;
+  height: 44vw;
+  min-width: 300px;
+  min-height: 400px;
+  border: 3px solid #45446e;
+  background-color: #1e1e30;
+}
+
+.Sklep #npc {
+  height: 100%;
+  width: 100%;
+}
+
+.Sklep #przedmiot-container {
+  padding: 10px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 13px;
+}
+
+.Sklep #magazyn #przedmiot-container {
+  width: 7vw;
+  height: 7vw;
+}
+
+.Sklep #przedmioty #przedmiot-container {
+  width: 6vw;
+  height: 6vw;
+}
+
+/* Ukryj opis przedmiotu początkowo */
+.Sklep #opisLG {
+  display: none;
+  position: absolute;
+  top: 50%;
+  /* Ustaw opis pod kafelkiem */
+  left: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+
+}
+
+.Sklep #opisPG {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Sklep #opisPD {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  right: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Sklep #opisLD {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Sklep .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* przyciemnienie tła */
+  z-index: 1000;
+  /* aby był na wierzchu */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes slideFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale(1);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.Sklep .modalBrakMiedziakow {
+  animation: slideFade 2.5s forwards;
+  color: crimson;
+  font-family: Biko_Bold;
+  padding: 15px;
+  width: 400px;
+  max-width: 500px;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  z-index: 1000;
+  display: flex;
+  font-size: 16px;
+
+}
+
+.Sklep .modal {
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 15px;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 500px;
+  z-index: 1001;
+  /* musi być wyższy niż nakładka */
+}
+
+.Sklep #tak {
+  font-family: Biko_Bold;
+  color: white;
+  border: 2px solid #45446e;
+  background-color: #555487;
+  margin-left: 10px;
+}
+
+.Sklep #nie {
+  font-family: Biko_Bold;
+  color: white;
+  border: 2px solid #45446e;
+  background-color: #555487;
+  margin-left: 10px;
+}
+
+.Sklep #tak:hover,
+#nie:hover {
+  cursor: pointer;
+  background-color: #45446e;
+}
+
+
+/* Pokaż opis po najechaniu myszką na kontener przedmiotu */
+.Sklep #przedmiot-container:hover #opisLG {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Sklep #przedmiot-container:hover #opisPG {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Sklep #przedmiot-container:hover #opisPD {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Sklep #przedmiot-container:hover #opisLD {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Sklep .zalozone {
+  opacity: 50%;
+}
+
+.Sklep #ikona {
+  border: 3px solid #45446e;
+  width: 100%;
+  height: 100%;
+  margin-left: 5px;
+  background-color: #555487;
+}
+
+.Sklep #ikona img {
+  width: 100%;
+  height: 100%;
+}
+
+.Sklep #ikona:hover {
+  cursor: pointer;
+}
+
+
+.Sklep #przedmiot-container:hover .pospolity {
+  box-shadow: 0 0 10px rgba(44, 196, 44, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Sklep #przedmiot-container:hover .rzadki {
+  box-shadow: 0 0 20px rgba(14, 126, 255, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Sklep #przedmiot-container:hover .epicki {
+  box-shadow: 0 0 20px rgba(128, 24, 160, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Sklep #przedmiot-container:hover .legendarny {
+  box-shadow: 0 0 20px rgba(255, 238, 0, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Sklep #pospolity {
+  color: rgba(44, 196, 44, 0.7);
+}
+
+.Sklep #rzadki {
+  color: rgba(14, 126, 255, 0.7);
+}
+
+.Sklep #epicki {
+  color: rgba(128, 24, 160, 0.7);
+}
+
+.Sklep #legendarny {
+  color: rgba(255, 238, 0, 0.7);
+}
+
+.Sklep .ilosc {
+  width: 1vw;
+  /* Dostosuj szerokość i wysokość do preferencji */
+  height: 1vw;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+}
+
+.Sklep #boxStatystyki {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 35%;
+}
+
+.Sklep #itemStatystyka {
+  text-align: left;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .Sklep #magazyn #przedmiot-container {
+    width: 24%;
+    height: 8vw;
+    font-size: 12px;
+    min-height: 65px;
+  }
+
+  .Sklep #przedmioty {
+    margin-top: 35px;
+  }
+
+  .Sklep #przedmioty #przedmiot-container {
+    height: 57px;
+    width: 57px;
+    font-size: 12px;
+  }
+  .Sklep .modal {
+    width: 350px;
+  }
+  .Sklep .modalBrakMiedziakow {
+    width: 350px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Sklep #magazyn #przedmiot-container {
+    width: 32%;
+    height: 85px;
+    font-size: 10px;
+  }
+  .Sklep #magazyn .ilosc {
+    font-size: 15px;
+  }
+  .Sklep .modal {
+    width: 300px;
+  }
+  .Sklep .modalBrakMiedziakow {
+    width: 300px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,153 @@
+@font-face {
+    font-family: Biko_Bold;
+    src: url("./Biko_Bold.otf") format("opentype");
+
+}
+
+.Wiadomosc #zawartoscEkranu {
+    min-width: 650px;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+.Wiadomosc .wyborEkranu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #5d5c94;
+    width: 95%;
+    border: 3px solid #45446e;
+    border-radius: 10px 10px 0 0;
+    min-width: 200px;
+    align-items: center;
+
+}
+
+
+.Wiadomosc #napiszWiadomosc {
+    width: 50%;
+    height: 30px;
+    border: 3px solid #45446e;
+    background-color: #8583d4;
+    border-radius: 0px 10px 0px 0px;
+    color: white;
+    font-family: Biko_Bold;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Wiadomosc #skrzynkaPocztowa {
+    width: 50%;
+    height: 30px;
+    border: 3px solid #45446e;
+    background-color: #555487;
+    border-radius: 10px 0px 0px 0px;
+    color: white;
+    font-family: Biko_Bold;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Wiadomosc .formularz {
+    border: 3px solid #45446e;
+    border-top: none;
+    border-radius: 0px 0px 30px 30px;
+    width: 95%;
+    height: 40vw;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4vw;
+    text-align: left;
+}
+
+.Wiadomosc input {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    font-family: Biko_Bold;
+}
+
+.Wiadomosc label {
+    display: block;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.Wiadomosc textarea {
+    display: block;
+    margin: 0 auto;
+    resize: none;
+    width: 95%;
+    height: 45%;
+    font-family: Biko_Bold;
+}
+
+.Wiadomosc #wyslij {
+    width: 8vw;
+    align-items: center;
+    font-family: Biko_Bold;
+    background-color: #5d5c94;
+    color: antiquewhite;
+    height: 40px;
+    border-radius: 30%;
+    border: #45446e solid 3px;
+}
+
+.Wiadomosc #przycisk {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    
+}
+
+.Wiadomosc #pokazError {
+    margin-top: 2px;
+    margin-left: 25px;
+    color: rgb(236, 41, 63);
+}
+
+
+.Wiadomosc #skrzynkaPocztowa:hover,
+.Wiadomosc #napiszWiadomosc:hover,
+.Wiadomosc #wyslij:hover {
+    background-color: #1e1e30;
+}
+
+
+.Wiadomosc .formularz input{
+    background-color: #45446e;
+    color:white;
+    font-family: Biko_Bold;
+}
+
+.Wiadomosc .formularz input:hover{
+    border: 2px solid #1e1e30;
+  }
+
+  .Wiadomosc .formularz textarea{
+    border: 2px solid #1e1e30;
+    background-color: #45446e;
+    color:white;
+    font-family: Biko_Bold;
+}
+
+@media screen and (max-width: 1000px) {
+    .Wiadomosc .formularz {
+        height: 400px;
+        font-size: 14px;
+    }
+    .Wiadomosc #wyslij {
+        width: 80px;
+    }
+  }

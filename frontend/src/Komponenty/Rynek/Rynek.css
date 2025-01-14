@@ -1,0 +1,888 @@
+@font-face {
+  font-family: Biko_Bold;
+  src: url("../Biko_Bold.otf") format("opentype");
+
+}
+
+
+.Rynek #kontener {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.Rynek #zawartoscEkranu {
+  padding-top: 5px;
+  min-width: 715px; 
+  background-image: url('tloRynek.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-shadow:
+  -1px -1px 0 black,  
+   1px -1px 0 black,
+  -1px  1px 0 black,
+   1px  1px 0 black; 
+}
+
+.Rynek #boxZawartosc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Rynek .boxKontener {
+  width: 97%;
+  height: 70vmin;
+  color: white;
+  font-family: Biko_Bold;
+}
+
+.Rynek .boxPrzyciski {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid transparent;
+  border-image: url('ciemneDrewno.png') 66 fill;
+}
+
+.Rynek .boxPrzyciskZakup {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+.Rynek .boxPrzyciskSprzedaz {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  width: 100%;
+  min-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.Rynek .boxPrzyciskSprzedaz.aktywny {
+  background: rgba(255, 255, 255,0.3);
+  box-shadow: 0px 0px 35px white;
+}
+
+.Rynek .boxPrzyciskZakup.aktywny {
+  background: rgba(255, 255, 255,0.3);
+  box-shadow: 0px 0px 35px white;
+}
+
+.Rynek .boxPrzyciskSprzedaz:hover {
+  background: rgba(255, 255, 255,0.3);
+}
+
+.Rynek .boxPrzyciskZakup:hover {
+  background: rgba(255, 255, 255,0.3);
+}
+
+
+
+.Rynek .boxGlowny {
+  background-color: rgba(0, 0, 0,0.7);
+  border: 5px solid transparent;
+  border-image: url('ciemneDrewno.png') 30 round;
+  box-shadow: 10px 10px 55px black;
+}
+
+.Rynek .boxSprzedaz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.Rynek #magazyn {
+  background-color: #d0d0d0;
+  max-height: 65vh;
+  flex-wrap: wrap;
+  display: flex;
+  overflow: auto;
+  border: 1px solid transparent;
+  border-image: url('ciemneDrewno.png') 30 round;
+  background-color: rgba(0,0,0,0.3);
+  padding-right: 5vmin;
+  padding-left: 2vmin;
+}
+
+.Rynek #magazyn #przedmiot-container {
+  width: 25%;
+  padding: 10px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+.Rynek #magazyn #ikona {
+  border: 1px solid transparent;
+  border-image: url('ciemneDrewno.png') 1 fill;
+  width: 100%;
+  height: 100%;
+  min-width: 50px;
+  min-height: 50px;
+  margin-left: 1vmin;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9); /* Dodanie efektu cienia */
+}
+
+.Rynek #magazyn #ikona img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.Rynek #magazyn #opisLG {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Rynek #opisPG {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Rynek #opisPD {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  right: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Rynek #magazyn #opisLD {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Rynek #przedmiot-container:hover #opisLG {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Rynek #przedmiot-container:hover #opisPG {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Rynek #przedmiot-container:hover #opisPD {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Rynek #przedmiot-container:hover #opisLD {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Rynek .ilosc {
+  width: 1vw;
+  height: 1vw;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+}
+
+
+
+.Rynek #boxStatystyki {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 35%;
+}
+
+.Rynek #itemStatystyka {
+  text-align: left;
+}
+
+.Rynek #przedmiot-container:hover .pospolity {
+  box-shadow: 0 0 10px rgba(44, 196, 44, 0.7);
+}
+
+.Rynek #przedmiot-container:hover .rzadki {
+  box-shadow: 0 0 20px rgba(14, 126, 255, 0.7);
+}
+
+.Rynek #przedmiot-container:hover .epicki {
+  box-shadow: 0 0 20px rgba(128, 24, 160, 0.7);
+}
+
+.Rynek #przedmiot-container:hover .legendarny {
+  box-shadow: 0 0 20px rgba(255, 238, 0, 0.7);
+}
+
+.Rynek #opis #pospolity {
+  color: rgba(44, 196, 44, 0.7);
+}
+
+.Rynek #opis #rzadki {
+  color: rgba(14, 126, 255, 0.7);
+}
+
+.Rynek #opis #epicki {
+  color: rgba(128, 24, 160, 0.7);
+}
+
+.Rynek #opis #legendarny {
+  color: rgba(255, 238, 0, 0.7);
+}
+
+.Rynek .boxMagazyn {
+  padding: 2vmin;
+}
+
+.Rynek .zalozone {
+  opacity: 50%;
+}
+
+
+.Rynek .boxLewy {
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.Rynek .boxSrodek {
+  width: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rynek .boxPrawy {
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+
+.Rynek .boxSrodek #ikona {
+  width: 100%;
+  height: 100%;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.Rynek .boxSrodek #ikona img {
+  width: 100%;
+  height: 100%;
+}
+
+.Rynek .boxPrzedmiot {
+  width: 15vmin;
+  height: 15vmin;
+}
+
+.Rynek .boxPrzedmiot img{
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9); /* Dodanie efektu cienia */
+}
+
+.Rynek .boxFormularz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid #45446e;
+  background-color: #1e1e30;
+  margin: 2vmin;
+  padding: 15px;
+  width: 100%;
+}
+
+.Rynek .boxFormularz > div {
+  padding: 1vh; 
+}
+
+.Rynek .boxSrodek #przedmiot-container {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Rynek #opisBox {
+  display: none;
+  position: absolute;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  top: -10%;
+  right: 30%;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Rynek .boxSrodek #przedmiot-container:hover #opisBox {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Rynek #przedmiot-container .ilosc {
+  margin-left: 1vmin;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-family: Biko_Bold;
+}
+
+.Rynek .white-space {
+  white-space: nowrap;
+}
+
+
+.Rynek .boxFormularz input{
+  background-color: #45446e;
+  color:white;
+  font-family: Biko_Bold;
+}
+
+.Rynek .boxFormularz input:hover{
+  border: 2px solid #1e1e30;
+  transition: transform 0.1s; 
+  transform: scale(1.05);
+}
+
+.Rynek .boxFormularz select{
+  margin-top: 2vh;
+  background-color: #45446e;
+  color:white;
+  font-family: Biko_Bold;
+}
+
+.Rynek .boxFormularz select:hover{
+  transition: transform 0.1s; 
+  transform: scale(1.05);
+}
+
+.Rynek .boxFormularz .przyciskWystaw button{
+  margin-top: 2vh;
+  background-color: #45446e;
+  padding: 10px;
+  border: 2px solid #1e1e30;
+  color:white;
+  font-family: Biko_Bold;
+}
+
+.Rynek .boxFormularz .przyciskWystaw button:hover{
+  transition: transform 0.1s; 
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.Rynek .pokazError{
+    height: 3vh;
+    color: rgb(236, 41, 63);
+    font-size: 2vmin;
+}
+
+.Rynek .boxPodatek{
+  height: 3vh;
+  font-size: 2.2vmin;
+}
+
+.Rynek .boxPodatek.kolorCzerwony{
+  color: rgb(236, 41, 63);
+}
+
+.Rynek .boxRynek{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Rynek .boxTabelaRynek{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.Rynek .wierszTabeli{
+  box-shadow: 0px 0px 5px white;
+}
+
+.Rynek .komorkaTabeli{
+  padding: 0.5vmin;
+}
+
+.Rynek .komorkaTabeli.przyciskKupnaTabela{
+  min-width:8vmin;
+}
+
+.Rynek .boxFiltry{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.Rynek .boxFiltrWybor{
+  background-color: rgba(255, 255, 255,0.3);
+}
+
+.Rynek .boxFiltrWybor div{
+  padding: 1vmin;
+  transition: transform 0.5s; 
+}
+
+.Rynek .boxFiltrWybor .boxWybor:hover{
+  cursor: pointer;
+  transition: transform 0.5s; 
+  transform: scale(1.05);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255,0.4);
+  box-shadow: 10px 10px 25px black;
+
+}
+
+.Rynek .boxWybor.wybrany{
+  background-color: rgba(255, 255, 255,0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.Rynek .boxFiltrWpisz input{
+  transition: transform 0.5s;
+  background-color: rgba(255, 255, 255,0.4);
+  box-shadow: 0px 0px 25px black;
+  color:white;
+  font-family: Biko_Bold;
+  width: 50%;
+  border: 0px solid white;
+}
+
+.Rynek .boxFiltrWpisz input:hover{
+  transition: transform 0.5s; 
+  transform: scale(1.05);
+  border: 0px solid white;
+}
+
+.Rynek .boxFiltrWpisz input:focus{
+  transition: transform 0.5s; 
+  transform: scale(1.05);
+  border: 0px solid white;
+  box-shadow: 0px 0px 25px white;
+}
+
+.Rynek .boxRynekPrawy{
+  width: 100%;
+  
+}
+
+.Rynek .boxRynekPrawy{
+  width: 100%;
+
+}
+
+
+.Rynek .boxTabelaRynek th {
+  background-color: rgba(255, 255, 255,0.3)
+}
+
+.Rynek .boxTabelaRynek tr:nth-child(even) {
+  background-color: rgba(255, 255, 255,0.3)
+}
+
+.Rynek .boxTabelaRynek th{
+  text-align: center;
+}
+.Rynek .boxTabelaRynek td{
+  text-align: center;
+}
+
+.Rynek .boxRynek #przedmiot-container{
+  width: 8vmin;
+  height: 8vmin;
+  box-sizing: border-box;
+  position: relative;
+}
+.Rynek .boxRynek #ikona{
+  width: 100%;
+  height: 100%;
+}
+.Rynek .boxRynek #ikona img{
+  width: 100%;
+  height: 100%;
+}
+
+.Rynek .boxRynek #opisLG {
+  display: none;
+  position: absolute;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  top:10%;
+  left: 10%;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Rynek .boxRynek #opisLD {
+  display: none;
+  position: absolute;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  bottom: 50%;
+  left: 10%;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Rynek .przejsciaStron{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 3vmin;
+}
+
+.Rynek .przejsciaStron div{
+  padding: 1vmin;
+}
+
+.Rynek .boxStrzalka{
+  cursor: pointer;
+}
+
+.Rynek .twojPrzedmiot{
+  color:rgb(221, 188, 0);
+}
+.Rynek .twojaAktualnaOferta{
+  color:rgb(0, 211, 53);
+}
+
+.Rynek .tloOdbioru {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rynek .srodekOdbioru {
+  align-items: center;
+  z-index: 1001; 
+  margin: auto;
+}
+
+
+.Rynek .komunikatOdbioru{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Rynek .listaPrzedmiotow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.Rynek .przedmiotDoOdbioru {
+  width: calc(10% - 20px); 
+  min-width: calc(18vmin - 1vmin); 
+  margin-bottom: 20px; 
+}
+
+.Rynek .komunikatOdbioru #ikona {
+  width: 100%; 
+  min-width: 50px;
+  overflow: hidden; 
+}
+
+.Rynek .komunikatOdbioru #ikona img {
+  width: 100%; 
+  height: auto; 
+}
+
+.Rynek .boxPrzyciskPomin{
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+.Rynek .przyciskPomin {
+
+  min-width: 50px;
+  background-color: #45446e;
+  padding: 10px;
+  border: 2px solid #1e1e30;
+  color:white;
+  font-family: Biko_Bold;
+  transition: transform 0.5s;
+}
+
+.Rynek .przyciskPomin:hover {
+  transition: transform 0.5s; 
+  transform: scale(1.05);
+  background-color: #8583d4;
+}
+
+.Rynek .nieSprzedany{
+  text-shadow: 2px 2px 2px rgba(202, 92, 92,0.9);
+}
+
+.Rynek .Kupiony{
+  text-shadow: 2px 2px 2px rgba(171, 255, 46,0.9)
+}
+
+.Rynek .duzoDoOdbioru{
+  overflow: auto;
+  max-height: 60vh;
+}
+
+
+.Rynek .boxLimitError{
+  position: relative;
+}
+.Rynek .limitError{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1002; 
+  color:red;
+  font-size: 1vmin;
+  font-family: Biko_Bold;
+  opacity: 0;
+}
+
+
+.Rynek .limitError{
+  transform: translateY(-1vw); 
+  animation: pokaz 3.1s;
+}
+
+@keyframes pokaz {
+  0%{
+      opacity: 0.3;
+      transform: translateY(-5vw); 
+      font-size: 1vmin;
+    }
+
+100% {
+  opacity: 1;
+  font-size: 3vmin; 
+  transform: translateY(-10vw); 
+}
+}
+
+.Rynek .boxBrakMiejscaAlert{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1111; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rynek .BrakMiejscaAlert {
+  color: rgba(255, 0, 0,0.9);
+  padding: 20px;
+  font-size: 24px;
+  font-family: Biko_Bold;
+  border-radius: 10px;
+  animation: powieksz 1.2s; 
+}
+
+.Rynek .przyciskKupna{
+  transition: transform 0.5s; 
+  border: 3px solid transparent;
+  border-image: url('ciemneDrewno.png') 30 round;
+  box-shadow: 0px 0px 10px white;
+  padding: 1vmin;
+}
+.Rynek .przyciskKupna:hover{
+  transition: transform 0.5s; 
+  transform: scale(0.95);
+  box-shadow: inset 0px 0px 15px white;
+  cursor: pointer;  
+}
+
+.Rynek .tloZakupu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1006; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rynek .boxZakupu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 30px;
+  border-radius: 5px;
+  z-index: 1001; 
+}
+
+.Rynek .boxZakupu input{
+  background-color: #45446e;
+  color:white;
+  font-family: Biko_Bold;
+  width: 50px;
+}
+
+
+.Rynek .wyjscieZzakupu {
+  font-size: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.Rynek .flexBoxRow{
+  display: flex;
+  flex-direction: row;
+  gap:3px;
+}
+
+.Rynek .flexBoxColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+.Rynek .flexBoxColumn.Center{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rynek .boxCenaKupTeraz{
+  transition: transform 0.1s; 
+  color:white;
+  cursor: pointer;
+  }
+
+.Rynek .boxCenaKupTeraz:hover{
+color:black;
+}
+
+.Rynek .przyciskKupnaBlokada{
+  padding: 1vmin;
+  opacity: 70%;
+  border: 2px solid #1e1e30;
+}
+
+.Rynek .boxPrzyciskKupna{
+  margin-top: 2vh;
+}
+
+.Rynek .boxObierzMiedziaki {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1006; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rynek .OdbierzMiedziaki {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 30px;
+  border-radius: 5px;
+  z-index: 1001; 
+}
+
+.Rynek .napisTytulKomunikatu{
+  font-size: 30px;
+}

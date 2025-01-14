@@ -1,0 +1,194 @@
+@font-face {
+  font-family: Biko_Bold;
+  src: url("./Biko_Bold.otf") format("opentype");
+
+}
+
+.Zadania #zawartoscEkranu {
+  min-width: 700px;
+  background-color: #383866;
+  display: flex;
+  flex: 1;
+}
+
+.Zadania #Kolumna {
+  flex-basis: 30%;
+  /* Szerokość kolumny (30% szerokości kontenera) */
+  margin: 20px;
+  background-image: url('./zwoj2.png');
+  background-size: cover;
+  color: antiquewhite;
+  height: 660px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.Zadania #Naglowek {
+  margin-top: 50px;
+  font-size: 25px;
+  margin-bottom: 5px;
+
+}
+
+.Zadania #Etap {
+  margin-top: 5px;
+  font-size: 25px;
+}
+
+.Zadania #Tytul {
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+.Zadania #Tresc {
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+.Zadania #logo {
+  width: 50px;
+  height: 50px;
+}
+
+.Zadania #przedmiot-container {
+  width: 25%;
+  padding: 5px;
+  box-sizing: border-box;
+  align-content: center;
+  position: relative;
+  display: flex;
+}
+
+.Zadania #opis {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Zadania #przedmiot-container:hover #opis {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+
+.Zadania #ikona {
+  border: 3px solid #45446e;
+  width: 80%;
+  height: 4vw;
+  min-width: 50px;
+  min-height: 50px;
+  margin-left: 5px;
+  background-color: #555487;
+}
+
+.Zadania #ikona img {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.Zadania #przedmiot-container:hover .pospolity {
+  box-shadow: 0 0 10px rgba(44, 196, 44, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Zadania #przedmiot-container:hover .rzadki {
+  box-shadow: 0 0 20px rgba(14, 126, 255, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Zadania #przedmiot-container:hover .epicki {
+  box-shadow: 0 0 20px rgba(128, 24, 160, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Zadania #przedmiot-container:hover .legendarny {
+  box-shadow: 0 0 20px rgba(255, 238, 0, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Zadania #pospolity {
+  color: rgba(44, 196, 44, 0.7);
+}
+
+.Zadania #rzadki {
+  color: rgba(14, 126, 255, 0.7);
+}
+
+.Zadania #epicki {
+  color: rgba(128, 24, 160, 0.7);
+}
+
+.Zadania #legendarny {
+  color: rgba(255, 238, 0, 0.7);
+}
+
+.Zadania #boxStatystyki {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 35%;
+}
+
+.Zadania #itemStatystyka {
+  text-align: left;
+}
+
+.Zadania button {
+  width: 50%;
+  height: 30px;
+  border: 3px solid #45446e;
+  background-color: #555487;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  font-family: Biko_Bold;
+  text-decoration: none;
+}
+
+.Zadania button:hover {
+  background-color: #45446e;
+  cursor: pointer;
+}
+
+.Zadania progress {
+  width: 150px;
+  height: 20px;
+  background-color: #8583d4;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: #45446e;
+  overflow: hidden;
+}
+
+.Zadania progress::-webkit-progress-bar {
+  background-color: #8583d4;
+  border-radius: 10px;
+}
+
+.Zadania progress::-webkit-progress-value {
+  background-color: #45446e;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Zadania progress::-moz-progress-bar {
+  background-color: #45446e;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
