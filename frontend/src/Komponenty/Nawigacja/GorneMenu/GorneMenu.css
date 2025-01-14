@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Biko_Bold;
+    src: url("../Biko_Bold.otf") format("opentype");
+
+}
+
+.TopBar {
+    font-family: Biko_Bold;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('gorneMenu.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-image: url('ciemneDrewno.png') 30 round;
+    min-width: 905px;
+    cursor: default;
+
+}
+
+
+
+.TopBar #MoneyView {
+    
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    flex: 10%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.TopBar #MoneyView img {
+    width: 20px;
+    height: 20px;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 15px;
+}
+
+.TopBar #GameTitle {
+    text-align: center;
+    flex: 80%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.TopBar #ActionButons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 10%;
+}
+
+.TopBar #ActionButons .wyloguj {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px goldenrod;
+    color:goldenrod;
+    transition: 0.5s;
+}
+
+.TopBar #ActionButons .wyloguj:hover {
+   transition: 0.5s;
+    color:black;
+    box-shadow: 0px 0px 30px black;
+
+}
+
+
+
+
+.TopBar .przyciskGorny:hover {
+    cursor: pointer;
+    background-color: #45446e;
+}

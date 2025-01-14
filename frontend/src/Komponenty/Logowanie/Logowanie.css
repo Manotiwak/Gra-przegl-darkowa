@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Biko_Bold;
+    src: url("./Biko_Bold.otf") format("opentype");
+
+  }
+  
+  
+.Logowanie{
+    height: 100vh;
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-family: Biko_Bold;
+
+    background-image: linear-gradient(rgba(30, 30, 48, 0.9), rgba(30, 30, 48, 0.9)), url('./bg.jpg');
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.Logowanie .wyborFormularza{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #5d5c94;
+    width: 25%;
+    border: 3px solid #45446e;
+    border-radius: 10px 10px 10px 10px;
+    min-width: 200px;
+}
+
+.Logowanie .formularz{
+    width: 30%;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+.Logowanie #daneUzytkownika{
+    width: 100%;
+    margin-top: 1vh;
+    background-color:#5d5c94;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:5vh;
+    padding-bottom:5vh;
+    line-height: 5vh;
+    border: 3px solid #45446e;
+    border-radius: 10px 10px 10px 10px;
+    min-width: 250px;
+    
+}
+
+.Logowanie #zaloguj{
+    margin-top: 1vh;
+    width: 20%;
+    background-color:#5d5c94;
+    border: 3px solid #45446e;
+    border-radius: 10px 10px 10px 10px;
+    padding: 2vh;
+    color:white;
+    font-family: Biko_Bold;
+    min-width: 100px;
+}
+
+.Logowanie #zaloguj:hover{
+    background-color: #1e1e30;
+}
+
+.Logowanie #wyborLogowania{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    border: 3px solid #45446e;  
+background-color: #8583d4;
+border-radius: 10px 0px 0px 10px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+color:white;
+    font-family: Biko_Bold;
+    text-decoration: none;
+}
+
+.Logowanie #wyborRejestracji{
+    width: 50%;
+    border: 3px solid #45446e;
+background-color: #555487;
+border-radius: 0px 10px 10px 0px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color:white;
+    font-family: Biko_Bold;
+    text-decoration: none;
+}
+
+.Logowanie #wyborLogowania:hover{
+    background-color: #1e1e30;
+}
+
+.Logowanie #wyborRejestracji:hover{
+    background-color: #1e1e30;
+}
+.Logowanie p{
+    line-height: 0rem;
+    height: auto;
+}
+
+.Logowanie #pokazError{
+
+    margin-top: 0;
+    line-height: 1rem;
+text-align: center;
+    color: red;
+    font-size: small;
+  height: 1vh;
+    padding-bottom: 30px;
+}
+
+.Logowanie .formularz input{
+    background-color: #45446e;
+    color:white;
+    font-family: Biko_Bold;
+}
+
+.Logowanie .formularz input:hover{
+    border: 2px solid #1e1e30;
+  }

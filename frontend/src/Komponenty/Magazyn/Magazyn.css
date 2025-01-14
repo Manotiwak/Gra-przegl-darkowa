@@ -1,0 +1,192 @@
+@font-face {
+    font-family: Biko_Bold;
+    src: url("../Biko_Bold.otf") format("opentype");
+
+  }
+
+
+.Magazyn #kontener{
+    display: flex;
+  flex-direction: row; 
+}
+
+
+.Magazyn #zawartoscEkranu{
+  margin-top: 5vh;
+  min-width: 700px;
+  background-color: #383866;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Magazyn
+{
+    font-family: Biko_Bold;
+}
+
+.Magazyn #boxMagazyn {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  padding: 2vmin;
+  margin: 0 auto ;
+  border: 3px solid #45446e;
+  background-color: #1e1e30;
+  
+}
+
+.Magazyn #boxDolny{
+  flex: 1;
+}
+
+.Magazyn #przedmiot-container {
+  width: 10%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative; 
+}
+
+
+.Magazyn #opis {
+  display: none;
+  position: absolute;
+  top: 50%; 
+  right: 10%;
+  background-color: rgba(85, 84, 135, 0.8); 
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+
+}
+
+
+.Magazyn #przedmiot-container:hover #opis {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Magazyn #ikona{
+  border: 3px solid #45446e;
+  width: 5vw;
+    height: 5vw;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: #555487;
+}
+
+.Magazyn #ikona img{
+  width: 100%;
+    height: 100%;
+
+}
+
+
+.Magazyn #przedmiot-container:hover .pospolity {
+  box-shadow: 0 0 10px rgba(44, 196, 44, 0.7); 
+}
+
+.Magazyn #przedmiot-container:hover .rzadki {
+  box-shadow: 0 0 20px rgba(14, 126, 255, 0.7); 
+}
+
+.Magazyn #przedmiot-container:hover .legendarny {
+  box-shadow: 0 0 20px rgba(255, 238, 0, 0.7); 
+}
+
+.Magazyn #opis #pospolity{
+  color: rgba(44, 196, 44, 0.7);
+}
+
+.Magazyn #opis #rzadki{
+  color: rgba(14, 126, 255, 0.7);
+}
+
+.Magazyn #opis #legendarny{
+  color: rgba(255, 238, 0, 0.7);
+}
+
+
+.Magazyn .zaznaczEkwipunek {
+  width: 1vw; 
+  height: 1vw;
+  min-width: 20px;
+    min-height: 20px;
+  background-color: rgba(85, 84, 135, 0.8); 
+  border:2px solid rgb(30, 30, 48,0.8);
+  position: absolute;
+  top:15px;
+  left: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Magazyn .odznaczEkwipunek {
+  width: 1vw; 
+  height: 1vw;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: rgba(85, 84, 135, 0.8); 
+  border:2px solid rgb(30, 30, 48,0.8);
+  position: absolute;
+  top:15px;
+  left: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Magazyn #napisX{
+  position: relative;
+  text-align: center;
+}
+
+
+.Magazyn .ilosc {
+  width: 1vw; 
+  height: 1vw;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  bottom:0px;
+  left: 15px;
+}
+
+
+
+.Magazyn #boxStatystyki{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 35%;
+}
+
+.Magazyn #itemStatystyka{
+  text-align: left;
+}
+
+.Magazyn #powrot{
+  border: 3px solid #45446e;
+  border-radius: 90%;
+  cursor: pointer;
+  height: 4vh;
+  width: 4vh;
+  margin-left: 15% ;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  font-size: 3vh;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #1e1e30;
+  margin-bottom: 10px;
+}
+
+

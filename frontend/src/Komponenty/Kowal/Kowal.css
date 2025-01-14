@@ -1,0 +1,425 @@
+@font-face {
+  font-family: Biko_Bold;
+  src: url("./Biko_Bold.otf") format("opentype");
+
+}
+
+
+.Kowal #zawartoscEkranu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 90vh;
+  grid-auto-rows: 1fr;
+  margin: 25px;
+  min-width: 645px;
+  border: 3px solid #45446e;
+  background-color: #1e1e30;
+
+}
+
+.Kowal #magazyn {
+  flex-wrap: wrap;
+  display: flex;
+  overflow: auto;
+  width: 25vw;
+  min-width: 300px;
+  font-size: 1.1vw;
+}
+
+.Kowal #przedmiot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e30;
+  font-size: 15px;
+}
+
+.Kowal #ulepszenie {
+  background-image: url('kuźnia2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-left: 3px solid #45446e;
+  font-size: 15px;
+}
+
+.Kowal #przezroczystosc {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Kowal table {
+  border-collapse: collapse;
+  height: 300px;
+  width: 95%;
+  font-family: Biko_Bold;
+  color: antiquewhite;
+}
+
+.Kowal td {
+
+  padding: 10px;
+  width: 33%;
+  text-align: left;
+}
+
+.Kowal .centered {
+  text-align: center;
+}
+
+.Kowal #ulepsz {
+  width: 25%;
+  align-items: center;
+  font-family: Biko_Bold;
+  background-color: rgba(215, 18, 18, 0.933);
+  border: #1e1e30;
+  color: antiquewhite;
+  height: 25px;
+  border-radius: 20%;
+}
+
+.Kowal #ulepsz:hover {
+  transform: scale(1.1);
+  background-color: rgba(180, 28, 28, 0.933);
+}
+
+.Kowal #przedmiot-container {
+  width: 25%;
+  padding: 5px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  position: relative;
+  /* Dodaj position: relative; dla kontenera przedmiotu */
+}
+
+
+.Kowal #opisLG {
+  display: none;
+  position: absolute;
+  top: 50%;
+  /* Ustaw opis pod kafelkiem */
+  left: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+
+}
+
+.Kowal #opisPG {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Kowal #opisPD {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  right: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Kowal #opisLD {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 10%;
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 10px;
+  z-index: 1;
+  min-width: 60px;
+  box-sizing: border-box;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.Kowal #przedmiot-container:hover #opisLG {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Kowal #przedmiot-container:hover #opisPG {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Kowal #przedmiot-container:hover #opisPD {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Kowal #przedmiot-container:hover #opisLD {
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid #1e1e30;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.Kowal .zalozone {
+  opacity: 50%;
+}
+
+.Kowal #ikona {
+  border: 3px solid #45446e;
+  width: 4vw;
+  height: 4vw;
+  min-width: 50px;
+  min-height: 50px;
+  margin-left: 5px;
+  background-color: #555487;
+}
+
+.Kowal #ikona img {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.Kowal #przedmiot-container:hover .pospolity {
+  box-shadow: 0 0 10px rgba(44, 196, 44, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Kowal #przedmiot-container:hover .rzadki {
+  box-shadow: 0 0 20px rgba(14, 126, 255, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Kowal #przedmiot-container:hover .epicki {
+  box-shadow: 0 0 20px rgba(128, 24, 160, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Kowal #przedmiot-container:hover .legendarny {
+  box-shadow: 0 0 20px rgba(255, 238, 0, 0.7);
+  /* Dodaj cień na hover */
+}
+
+.Kowal #pospolity {
+  color: rgba(44, 196, 44, 0.7);
+}
+
+.Kowal #rzadki {
+  color: rgba(14, 126, 255, 0.7);
+}
+
+.Kowal #epicki {
+  color: rgba(128, 24, 160, 0.7);
+}
+
+.Kowal #legendarny {
+  color: rgba(255, 238, 0, 0.7);
+}
+
+.Kowal #boxStatystyki {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 35%;
+}
+
+.Kowal #itemStatystyka {
+  text-align: left;
+}
+
+.Kowal .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* przyciemnienie tła */
+  z-index: 1000;
+  /* aby był na wierzchu */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Kowal .modal {
+  background-color: rgba(85, 84, 135, 0.8);
+  border: 1px solid #1e1e30;
+  padding: 15px;
+  border-radius: 5px;
+  color: antiquewhite;
+  width: 40%;
+  font-size: 1.2vw;
+  max-width: 700px;
+  z-index: 1001;
+}
+
+.Kowal .ilosc {
+  width: 1vw;
+  height: 1vw;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+  color: #1e1e30;
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale(1);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.Kowal .modalBrakUlepszaczy {
+  animation: slideFade 2.5s forwards;
+  color: crimson;
+  font-family: Biko_Bold;
+  padding: 15px;
+  width: 35%;
+  max-width: 500px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  z-index: 1000;
+  font-size: 1vw;
+  display: flex;
+
+}
+
+.Kowal #tak {
+  font-family: Biko_Bold;
+  color: white;
+  border: 2px solid #45446e;
+  background-color: #555487;
+  margin-left: 10px;
+}
+
+.Kowal #nie {
+  font-family: Biko_Bold;
+  color: white;
+  border: 2px solid #45446e;
+  background-color: #555487;
+  margin-left: 10px;
+}
+
+.Kowal #tak:hover,
+#nie:hover {
+  cursor: pointer;
+  background-color: #45446e;
+}
+
+@media screen and (max-width: 1000px) {
+  .Kowal #zawartoscEkranu {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .Kowal #magazyn {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+    font-size: 12px;
+  }
+
+  .Kowal #przedmiot {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    margin-right: 50px;
+  }
+
+  .Kowal #ulepszenie {
+    grid-column: 2 / 3;
+    grid-row: 3 / 6;
+    height: 300px;
+    width: 300px;
+    font-size: 15px;
+    border: 3px solid #45446e;
+  }
+
+  .Kowal #ulepszenie .ilosc {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    color: #1e1e30;
+  }
+
+  .Kowal #wysrodkowanie {
+    margin-top: 20%;
+  }
+
+  .Kowal #przedmiot #przedmiot-container {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .Kowal #ulepszenie #przedmiot-container {
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .Kowal #ulepszenie #ikona {
+    width: 50px;
+    height: 50px;
+  }
+
+  .Kowal .modalBrakUlepszaczy {
+    font-size: 13px;
+    left: 60%;
+  }
+
+  .Kowal .modal {
+    font-size: 13px;
+    width: 400px;
+  }
+}
